@@ -7,6 +7,9 @@ cd $WORKSPACE/djangoproject
 python3 manage.py makemigrations
 python3 manage.py migrate
 
+echo "$USER"
+echo "$PWD"
+
 echo "DB related changes are done"
 
 cd $WORKSPACE
@@ -14,8 +17,7 @@ cd $WORKSPACE
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
 
-echo "$USER"
-echo "$PWD"
+
 
 sudo systemctl daemon-reload
 sudo systemctl start gunicorn
