@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source myenv/Scripts/activate
+source myenv/bin/activate
