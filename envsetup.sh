@@ -4,14 +4,13 @@ if [-d "myenv"]
 then
     echo "Python virtual env exists"
 else
-    python virtualenv myenv
+    python3 -m venv myenv
 
 fi
 
 echo $PWD
 source myenv/Scripts/activate
-
-pip install -r requirements.txt
+pip install -r djangoproject/requirements.txt
 
 if [-d "logs"]
 then
