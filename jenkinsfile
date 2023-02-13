@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Setup python virtual env'){
             steps {
-                cleanWs()
+                //cleanWs()
                 sh '''
                     chmod +x envsetup.sh
                     ./envsetup.sh
