@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [-d "myenv"]
+if [ -d "myenv" ]
 then
     echo "Python virtual env exists"
 else
@@ -9,10 +9,10 @@ else
 fi
 
 echo $PWD
-source myenv/Scripts/activate
+source myenv/bin/activate
 pip install -r djangoproject/requirements.txt
 
-if [-d "logs"]
+if [ -d "logs" ]
 then
     echo "log folder exists"
 else
