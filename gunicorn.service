@@ -7,7 +7,7 @@ After=network.target
 User=root
 Group=www-data
 WorkingDirectory=/home/jenkins/django/djangoproject
-ExecStart=/home/$USER/django/bin/gunicorn \
+ExecStart=/home/jenkinsmaster/Documents/django/bin/gunicorn \
           --error-logfile /home/jenkinsmaster/Documents/django/logs/error.log \
           --workers 3 \
           --capture-output --log-level debug \
