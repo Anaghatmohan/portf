@@ -16,10 +16,10 @@ cd $WORKSPACE
 
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
-echo "/home/$USER/django"
-mkdir /home/$USER/django
-mkdir /home/$USER/django/logs/error.log
-sudo cp -rf $WORKSPACE  /home/$USER/django
+cd /home/jenkinsmaster/Documents
+mkdir /home/jenkinsmaster/Documents/django
+mkdir /home/jenkinsmaster/Documents/django/logs/error.log
+sudo cp -rf $WORKSPACE  /home/jenkinsmaster/Documents/django
 
 sudo systemctl daemon-reload
 sudo systemctl start gunicorn
