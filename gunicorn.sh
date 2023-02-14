@@ -17,6 +17,8 @@ cd $WORKSPACE
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
 
+mkdir /home/$USER/django
+mkdir /home/$USER/django/logs/error.log
 sudo cp -rf $WORKSPACE  /home/$USER/django
 
 sudo systemctl daemon-reload
