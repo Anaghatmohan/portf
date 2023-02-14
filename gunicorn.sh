@@ -19,6 +19,7 @@ sudo cp -rf gunicorn.service /etc/systemd/system/
 cd /home/jenkinsmaster/Documents
 sudo mkdir /home/jenkinsmaster/Documents/django
 sudo mkdir /home/jenkinsmaster/Documents/django/logs/error.log
+sudo mkdir /home/jenkinsmaster/Documents/django/bin/gunicorn
 sudo cp -rf $WORKSPACE  /home/jenkinsmaster/Documents/django
 
 sudo systemctl daemon-reload
