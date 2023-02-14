@@ -17,7 +17,7 @@ cd $WORKSPACE
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
 
-
+sudo cp -f $WORKSPACE  /home/$USER/django
 
 sudo systemctl daemon-reload
 sudo systemctl start gunicorn
