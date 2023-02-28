@@ -6,9 +6,9 @@ After=network.target
 [Service]
 User=root
 Group=www-data
-WorkingDirectory=/home/jenkins/django/djangoproject
+WorkingDirectory=/var/lib/jenkins/workspace/django-cicd/djangoproject
 ExecStart=/home/jenkinsmaster/Documents/django/bin/gunicorn \
-          --error-logfile /home/jenkinsmaster/Documents/django/logs/error.log \
+          --error-logfile var/lib/jenkins/workspace/django-cicd/error.log \
           --workers 3 \
           --capture-output --log-level debug \
           --bind unix:/run/gunicorn.sock \
