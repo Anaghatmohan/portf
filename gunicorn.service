@@ -8,7 +8,7 @@ User=root
 Group=www-data
 WorkingDirectory=/var/lib/jenkins/workspace/django-cicd/djangoproject
 ExecStart=/var/lib/jenkins/workspace/django-cicd/myenv/bin/gunicorn \
-          --error-logfile var/lib/jenkins/workspace/django-cicd/log/error.log \
+          --error-logfile /var/lib/jenkins/workspace/django-cicd/log/error.log \
           --workers 3 \
           --capture-output --log-level debug \
           --bind unix:/run/gunicorn.sock \
