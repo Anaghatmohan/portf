@@ -2,7 +2,7 @@
 
 source myenv/bin/activate
 
-cd $WORKSPACE/djangoproject
+cd /var/lib/jenkins/workspace/django-cicd/djangoproject
 
 python3 manage.py makemigrations
 python3 manage.py migrate
@@ -12,15 +12,11 @@ echo "$PWD"
 
 echo "DB related changes are done"
 
-cd $WORKSPACE
+cd /var/lib/jenkins/workspace/django-cicd/djangoproject
 
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
-cd /home/jenkinsmaster/Documents
-sudo mkdir /home/jenkinsmaster/Documents/django
-sudo mkdir /home/jenkinsmaster/Documents/django/logs/error.log
-sudo mkdir /home/jenkinsmaster/Documents/django/bin/gunicorn
-sudo cp -rf $WORKSPACE  /home/jenkinsmaster/Documents/django
+
 
 sudo systemctl daemon-reload
 sudo systemctl start gunicorn
