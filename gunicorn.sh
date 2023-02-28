@@ -22,7 +22,7 @@ sudo systemctl daemon-reload
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
 
-echo "Gunicorn started"
+echo "Gunicorn started execution"
 
 sudo systemctl status gunicorn
 sudo systemctl restart gunicorn
